@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Http Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="top">
+        <figure class="avatar image is-128x128">
+          <img class="is-rounded" src="./assets/bear.jpg">
+        </figure>
+        <div class="top-text">
+          <h1 class="title">Http Demo with XHR, Fetch and Axios</h1>
+          <h2 class="subtitle">using JSONPlaceholder</h2>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">URL</label>
+      </div>
+      <div class="field has-addons">
+        <p class="control">
+          <a class="button is-static">
+            https://jsonplaceholder.typicode.com
+          </a>
+        </p>
+        <p class="control is-expanded">
+          <input class="input" id="route" type="text" name="route" placeholder="Route" />
+        </p>
+      </div>
+
+      <div class="field">
+        <label class="label">Body</label>
+      </div>
+      <div class="field">
+        <p class="control">
+          <input class="input" id="body" type="text" name="body" placeholder="Body" />
+        </p>
+      </div>
+
+      <div class="field">
+        <label class="label">Method</label>
+      </div>
+      <div class="field">
+        <div class="control">
+          <div class="select">
+            <select id="method">
+              <option value="GET">GET</option>
+              <option value="POST">POST</option>
+              <option value="PUT">PUT</option>
+              <option value="PATCH">PATCH</option>
+              <option value="DELETE">DELETE</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <button class="button is-primary" onclick="lib.handleClickWithXHR()">
+            Go!
+          </button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Results</label>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <pre id="result">
+            Make a request to see the results here
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    <script src="bundle.js" type="text/javascript"></script>
+  </body>
+</html>
